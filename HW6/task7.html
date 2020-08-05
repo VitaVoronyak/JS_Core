@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+  
+      
+    <script>
+        document.body = document.createElement("body");
+   
+        let parag = document.createElement("p");
+        let Pnode = document.createTextNode("First paragraph");
+        parag.appendChild(Pnode);
+
+        let div = document.createElement('div');
+        div.id = 'mDiv';
+        div.appendChild(parag);
+
+        let main = document.createElement('main');
+        main.className = 'mainClass check item';
+        main.appendChild(div);
+
+        document.body.appendChild(main);
+   </script>
+
+</html>
