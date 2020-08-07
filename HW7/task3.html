@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button type= "button" id = "btn1" >Click to make the page blue.</button>
+        <button type= "button" id = "btn2" >Double-click to make the page pink.</button>
+        <button type= "button" id = "btn3" >Click and hold to make the page brown.</button>
+        <a href = "#" id = 'link'>Hover over to make page yellow.</a>
+    </div>
+    <script>
+
+        function changeColor(){
+            document.body.style.backgroundColor = "blue";
+        }
+        function doubleClick(){
+            document.body.style.backgroundColor = "pink";
+        }
+        function mouseDown(){
+            document.body.style.backgroundColor = "brown";
+        }
+        function mouseUp(){
+            document.body.style.backgroundColor = "white";
+        }
+        function mouseOver(){
+            document.body.style.backgroundColor = "yellow";
+        }
+
+        btn1.addEventListener('click', changeColor);
+        btn2.addEventListener('dblclick', doubleClick);
+        btn3.addEventListener('mousedown', mouseDown);
+        btn3.addEventListener('mouseup', mouseUp);
+        link.addEventListener('mouseover', mouseOver);
+        link.addEventListener('mouseout', mouseUp);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <select id = 'selectName'>
+            <option value = 'Peter'>Peter</option>
+            <option value = 'John'>John</option>
+            <option value = 'Alise'>Alise</option>
+            <option value = 'Alex'>Alex</option>
+            <option value = 'Iren'>Iren</option>
+        </select>
+        <input type = 'button' id='btn' value= "Choose and Delete">
+    </form>
+    <script>
+        function removeName(){
+            let currentName = document.getElementById('selectName');
+            currentName.remove(currentName.selectedIndex);
+        }
+
+        btn.addEventListener('click',removeName);
+    </script>
+
+</body>
+</html>

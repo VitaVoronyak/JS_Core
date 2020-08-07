@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type= "button" id = "btn" >Live button!</button>
+   
+    <script>
+        function click(){
+            var para = document.createElement("P"); 
+            para.innerText = "I was pressed!";  
+            document.body.appendChild(para);  
+        }
+
+        function mouseOver(){
+            var para = document.createElement("P"); 
+            para.innerText = "Mouse on me!";  
+            document.body.appendChild(para);
+        }
+
+        function mouseOut(){
+            var para = document.createElement("P"); 
+            para.innerText = "Mouse is not on me!";  
+            document.body.appendChild(para);
+        }
+
+
+        btn.addEventListener('click', click);
+        btn.addEventListener('mouseover', mouseOver);
+        btn.addEventListener('mouseout', mouseOut);
+
+    </script>
+</body>
+</html>

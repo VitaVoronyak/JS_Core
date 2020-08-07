@@ -1,0 +1,84 @@
+<select name="country" id="country">
+	<option value="ger">Germany</option>
+	<option value="usa">USA</option>
+	<option value="ukr">Ukraine</option>
+</select>
+                    
+<select name="cities" id="cities"></select>
+<p></p>
+
+<script>
+    let listCount = document.getElementById('country');
+    let cityList = document.getElementById('cities');
+
+            let city1 = document.createElement("option");
+            city1.text = "Berlin";
+            let city2 = document.createElement("option");
+            city2.text = "Hamburg";
+            let city3 = document.createElement("option");
+            city3.text = "Munich";
+            cityList.options.add(city1);
+            cityList.options.add(city2);
+            cityList.options.add(city3);
+            
+    function  myFunc(){
+        let currentCountry = listCount.options[listCount.selectedIndex].value;
+        if (currentCountry == 'usa'){
+            deleteOptions();
+           let city1 = document.createElement("option");
+            city1.text = "New-York";
+            let city2 = document.createElement("option");
+            city2.text = "Washington";
+            let city3 = document.createElement("option");
+            city3.text = "Boston";
+            let city4 = document.createElement("option");
+            city4.text = "Chikago";
+            cityList.options.add(city1);
+            cityList.options.add(city2);
+            cityList.options.add(city3);
+            cityList.options.add(city4);
+
+           
+        }else if(currentCountry == 'ukr'){
+            deleteOptions();
+            let city1 = document.createElement("option");
+            city1.text = "Lviv";
+            let city2 = document.createElement("option");
+            city2.text = "Kyiv";
+            let city3 = document.createElement("option");
+            city3.text = "Kharkiv";
+            let city4 = document.createElement("option");
+            city4.text = "Odessa";
+            cityList.options.add(city1);
+            cityList.options.add(city2);
+            cityList.options.add(city3);
+            cityList.options.add(city4);
+        }
+        else {
+            deleteOptions();
+            let city1 = document.createElement("option");
+            city1.text = "Berlin";
+            let city2 = document.createElement("option");
+            city2.text = "Hamburg";
+            let city3 = document.createElement("option");
+            city3.text = "Munich";
+            cityList.options.add(city1);
+            cityList.options.add(city2);
+            cityList.options.add(city3);
+        }
+    }
+
+    function output(){
+        document.getElementsByTagName('p')[0].innerHTML = ` ${listCount.options[listCount.selectedIndex].text}, ${cityList.options[cityList.selectedIndex].text}`;
+    }
+
+    function deleteOptions(){
+        let length = cityList.options.length;
+        for (i = length-1; i >= 0; i--) {
+            cityList.options[i] = null;
+        }
+    }
+    country.addEventListener('change', myFunc);
+    cities.addEventListener('change', output);
+
+</script>
