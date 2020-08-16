@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   
+    <input type="checkbox" name="fruit" value="Apple"> Apple<br>
+    <input type="checkbox" name="fruit" value="Banana"> Banana<br>
+    <input type="checkbox" name="fruit" value="Watermelon"> Watermelon <br>
+    <input type="checkbox" name="fruit" value="Peach"> Peach<br>
+    <input type="checkbox" name="fruit" value="Cherry"> Cherry
+ 
+    <script>
+        $('input:checkbox').click(function(){
+            var count = $(':checkbox:checked').length;
+            if(count===3){
+                $("input").prop("disabled", true);
+            }
+        })
+    </script>
+</body>
+</html>
