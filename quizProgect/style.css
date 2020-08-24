@@ -1,0 +1,305 @@
+.hidden {
+    display: none;
+}
+
+/*start*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.startContainer{
+    background-color: rgb(224, 152, 18);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home h1{
+    font-size: 75px;
+    font-family: 'Staatliches', cursive;
+    padding-bottom: 0.8em;
+}
+
+.btnPlay, .scoreBtn{
+    color:black;
+    font-size: 2.4rem;
+    font-family: 'Patrick Hand', cursive;
+    width: 35%;
+    padding: 2px 6px 2px 6px;
+    border-radius: 25px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+}
+
+ .scoreBtn:hover{
+    cursor: pointer;
+    transition: transform 150ms;
+    transform: scale(1.03);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.btnPlay:hover{
+    cursor: pointer;
+    transition: transform 150ms;
+    transform: scale(1.03);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.btnPlay + .scoreBtn{
+    margin-top: 12px;
+}
+
+/*gameSection*/
+
+body{
+    background-color:black;
+}
+
+#game{
+    max-width: 50%;
+    height: 30em;
+    margin: 50px auto; 
+    padding: 10px 20px; 
+    background-color: white;
+    border-radius: 25px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+}
+
+.choice{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    width: 100%;
+    margin: auto;
+}
+
+.choice-container {
+    height: 70px;
+    flex: 1 1 250px;
+    margin: 10px;
+    display: flex;
+    font-size: 2.4rem;
+    font-family: 'Patrick Hand', cursive;
+    text-align: center;
+    background: rgb(224, 152, 18);
+    border-radius: 25px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+}
+
+
+.choice-text {
+    width: 100%;
+}
+
+.choice-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(206, 144, 30, 0.5);
+    transform: scale(1.02);
+    transform: transform 100ms;
+}
+
+.correct {
+    background: linear-gradient(32deg, rgba(11, 223, 36) 0%, rgb(41, 232, 111) 100%);
+}
+
+.incorrect {
+    background: linear-gradient(32deg, rgba(230, 29, 29, 1) 0%, rgb(224, 11, 11, 1) 100%);
+}
+
+#question{
+    font-family: 'Staatliches', cursive;
+    color: black;
+    text-align: center;
+    margin-top: 80px;
+
+}
+/* Heads up Display */
+#head {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+
+}
+
+.head-item{
+    font-family:'Patrick Hand', cursive;
+    color: black;
+}
+
+.head-prefix {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+#score{
+    text-align: center;
+}
+
+#progressBar {
+    width: 10rem;
+    height: 1.5rem;
+    border: 0.2rem solid rgb(223, 142, 11);
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+#progressBarFull {
+    height: 100%;
+    background: rgb(223, 142, 11);
+    width: 0%;
+}
+
+.hide{
+    display: none;
+}
+
+/*end section*/
+#endContainer{
+    background-color: black;
+    height: 100%;
+    position:absolute;
+    width: 100%;
+}
+
+
+h2{
+    font-family: 'Staatliches', cursive;
+    font-size: 40px;
+    padding-bottom: 0.6em; 
+    color: white;
+    width: 300px;
+}
+
+#finalScore{
+    margin-top: 60px
+}
+
+#end{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.end-form{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Patrick Hand', cursive;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.endButton, #username, .btn{
+    margin-bottom: 10px;
+    font-size: 2.4rem;
+    font-family: 'Patrick Hand', cursive;
+    width: 300px;
+    background: rgb(224, 152, 18);
+    color: black;
+    border-radius: 25px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+}
+
+.endButton:hover{
+    cursor: pointer;
+    transition: transform 150ms;
+    transform: scale(1.03);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+
+#username{
+    border-radius: 10px;
+    font-size: 1.6rem;
+    margin-bottom:40px; 
+    background-color: white;
+}
+
+/*hightscore*/
+#scoreContainer{
+    background-color: rgb(224, 152, 18);;
+    height: 100%;
+    position:absolute;
+    width: 100%;
+}
+
+#highScores{
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    max-width: 50%;
+    border-radius: 25px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+}
+
+#highScores h1{
+    font-family: 'Staatliches', cursive;
+    font-size: 60px;
+    margin-top: 30px;
+}
+
+#highScoresList{
+    font-family: 'Patrick Hand', cursive;
+    list-style-type: none;
+    color: rgb(51, 30, 16);
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.homeBtn{
+    font-family: 'Patrick Hand', cursive;
+    font-size: 30px;
+    text-align: center;
+    background: rgb(224, 152, 18);
+    border-radius: 30px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+    width: 30%;
+    margin-bottom: 10px; 
+}
+
+.homeBtn:hover{
+    cursor: pointer;
+    transition: transform 150ms;
+    transform: scale(1.03);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+#finalScore{
+    padding-bottom: 10px;
+    font-size: 80px;
+}
